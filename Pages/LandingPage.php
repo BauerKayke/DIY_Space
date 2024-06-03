@@ -5,7 +5,7 @@
         <p>DIY <span>SPACE </span></p>
       </div>
       <ul>
-        <li><button class="btn-Create">Criar</button></li>
+        <li><button class="btn-Create" onclick='criarConta()'>Criar</button></li>
         <li><button class="btn-Enter">Entrar</button></li>
       </ul>
     </nav>
@@ -46,7 +46,9 @@
   <footer>
     <div>
       <div class="footerLink">
-        <img src="../assets/Facebook.svg" alt=""><img src="../assets/TwitterX.svg" alt=""><img src="../assets/Instagram.svg" alt="">
+        <img src="../assets/Facebook.svg" alt="">
+        <img src="../assets/TwitterX.svg" alt="">
+        <img src="../assets/Instagram.svg" alt="">
       </div>
       <div class="footerText">
         <div>
@@ -81,3 +83,12 @@
     </div>
   </footer>
 </body>
+
+<script>
+  function criarConta(){
+    window.location.href = '../Pages/CriarConta.php'
+  }
+  function login(){
+    window.location.href = '../Pages/Login.php'
+  }
+</script>
