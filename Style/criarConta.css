@@ -20,8 +20,9 @@
   padding: 0;
 }
 
-body {
+body.login {
   overflow: hidden;
+  height: 100vh;
 }
 
 main {
@@ -29,6 +30,8 @@ main {
   grid-template-columns: 1fr 1fr;
   height: 100vh;
 }
+
+
 
 .imgLogo {
   display: flex;
@@ -43,6 +46,8 @@ main {
     display: flex;
     align-items: start;
     flex-direction: column;
+
+
 
     h1 {
       font-family: 'Montserrat';
@@ -104,6 +109,18 @@ main {
       }
     }
 
+    #country {
+      height: 50px;
+      padding: 13px 16px;
+      margin-top: 3px;
+      background: var(--gray700);
+      color: var(--gray200);
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      font-family: 'Poppins';
+    }
+
     .inputEstadoCidade,
     .inputEnderecoNum {
       display: flex;
@@ -125,5 +142,48 @@ main {
       width: 25%;
     }
 
+    button {
+      height: 50px;
+      padding: 13px 16px;
+      margin-top: 3px;
+      background: var(--purple500);
+      color: #fff;
+      border: none;
+      font-family: 'Poppins';
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+  }
+}
+
+div input {
+  background: var(--gray700);
+  color: var(--gray200);
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: 'Poppins';
+  cursor: pointer;
+}
+
+input:hover {
+  border: 1px solid var(--purple500);
+}
+
+#country::selection {
+  border: 1px solid var(--purple500);
+}
+
+.accountExist {
+  margin-top: 18px;
+  font-size: 16px;
+  width: 100%;
+  text-align: center;
+
+  a {
+    color: var(--purple400);
+    font-weight: bold;
+    text-decoration: none;
   }
 }
