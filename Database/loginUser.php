@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
       mysqli_stmt_close($stmt);
       mysqli_close($conn);
-      header("Location: ../Pages/Feed.php");
+      header("Location: ../Pages/Perfil.php");
       exit();
     } else {
       echo "Erro: Email ou senha incorretos.";

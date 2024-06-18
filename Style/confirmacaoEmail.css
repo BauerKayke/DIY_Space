@@ -1,0 +1,124 @@
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  height: 100vh;
+}
+
+
+.modal-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  border-radius: 5px;
+
+  gap: 1.5rem;
+  padding: 2rem;
+  
+  background: var(--gray800);
+
+  & .modal-heading {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+.imgLogo {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 48px;
+  background: var(--gray800);
+
+  div {
+    width: 75%;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+
+    h1 {
+      font-family: 'Montserrat';
+      font-size: 64px;
+      font-weight: bold;
+      color: var(--purple500);
+
+      span {
+        color: #fff;
+      }
+    }
+
+    p {
+      font-family: 'Poppins';
+      font-size: 32px;
+      color: var(--gray100);
+    }
+  }
+}
+
+.formCadastro {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  padding: 64px 128px;
+  background: var(--gray900);
+  font-family: 'Poppins';
+
+  h1 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #F2F2F2;
+  }
+
+  p {
+    color: #808080;
+    font-size: 18px;
+  }
+
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    color: var(--gray200);
+    margin-top: 32px;
+    width: 100%;
+
+    div {
+      display: flex;
+      flex-direction: column;
+      font-size: 16px;
+
+      input {
+        height: 50px;
+        padding: 13px 16px;
+        margin-top: 3px;
+      }
+    }
+
+    .inputEstadoCidade,
+    .inputEnderecoNum {
+      display: flex;
+      flex-direction: row;
+      gap: 24px;
+    }
+
+    .inputEstadoCidade {
+      div {
+        width: 50%;
+      }
+    }
+
+    .endereco {
+      width: 75%;
+    }
+
+    .num {
+      width: 25%;
+    }
+
+  }
+}
