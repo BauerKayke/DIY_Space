@@ -63,7 +63,7 @@
     <input type="text" placeholder="Digite sua senha">
   </div>
 
-  <button>Criar conta</button>
+  <a href="./ConfirmacaoEmail.php">Criar conta</a>
 </form>
 <div>
 
