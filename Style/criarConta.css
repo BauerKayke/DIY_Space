@@ -20,9 +20,8 @@
   padding: 0;
 }
 
-body.login {
-  overflow: hidden;
-  height: 100vh;
+body {
+  /* overflow: hidden; */
 }
 
 main {
