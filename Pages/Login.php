@@ -7,10 +7,10 @@
   <link rel="stylesheet" href="../Style/criarConta.css">
   <title>DIY SPACE</title>
 </head>
-<body>
+<body class="login">
   <main>
     <div class="imgLogo">
-      <img src="../assets/Frame 47.png" alt="">
+      <img  src="../assets/Frame 47.png" alt="">
       <div>
         <h1>DIY <span>SPACE</span></h1>
         <p>lorem Ipsun</p>
@@ -18,10 +18,10 @@
       
     </div>
     <div class="formCadastro">
-      <h1>Criar conta</h1>
+      <h1>Bem-vindo de volta!</h1>
       <p>lorem ipsun dsnakda</p>
       <?php
-        include '../Components/formCadastro.php'
+        include '../Components/formLogin.php'
       ?>
     </div>
   </main>
