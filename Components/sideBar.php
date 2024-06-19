@@ -37,26 +37,27 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {
-    const menuToggle = document.querySelector('.menuToggle img');
-    const aside = document.querySelector('aside');
-    const menuItems = document.querySelectorAll('.menuItens div');
+  const menuToggle = document.querySelector('.menuToggle img');
+  const aside = document.querySelector('aside');
+  const menuItems = document.querySelectorAll('.menuItens div');
 
-    // Toggle the menu open/close
-    menuToggle.addEventListener('click', () => {
-      aside.classList.toggle('open');
-    });
+  // Toggle the menu open/close
+  menuToggle.addEventListener('click', () => {
+    aside.classList.toggle('open');
+  });
 
-    // Highlight the active menu item
-    const currentPage = 'settings'; // Exemplo de página atual, altere conforme necessário
-    menuItems.forEach(item => {
-      if (item.dataset.page === currentPage) {
-        item.classList.add('active');
-      }
+  // Highlight the active menu item based on the URL
+  const currentPage = window.location.pathname.split('/').pop(); // Pega a última parte da URL
+  menuItems.forEach(item => {
+    if (item.dataset.page === currentPage) {
+      item.classList.add('active');
+    }
 
-      item.addEventListener('click', () => {
-        menuItems.forEach(i => i.classList.remove('active'));
-        item.classList.add('active');
-      });
+    item.addEventListener('click', () => {
+      menuItems.forEach(i => i.classList.remove('active'));
+      item.classList.add('active');
     });
   });
+});
+
 </script>
