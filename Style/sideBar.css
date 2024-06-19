@@ -1,3 +1,19 @@
+:root {
+  --purple400: #9C6EFF;
+  --purple500: #944DFF;
+  --purple600: #8137F3;
+  --purple700: #6E2BD9;
+  --purple800: #531DBF;
+
+  --gray100: #E0E0E5;
+  --gray200: #9E9E9E;
+  --gray300: #535357;
+  --gray600: #3C3C42;
+  --gray700: #29292E;
+  --gray800: #202024;
+  --gray900: #141414;
+}
+
 aside {
   display: flex;
   flex-direction: column;
@@ -12,12 +28,12 @@ aside {
 }
 
 aside.open {
-  width: 200px;
+  width: 250px;
+  align-items: flex-start;
   /* Aumenta a largura quando a classe 'open' é adicionada */
 }
 
 aside {
-
   background-color: var(--gray700);
   height: 100%;
   position: fixed;
@@ -37,8 +53,13 @@ aside {
 }
 
 .menuItens div.active img {
-  border: 2px solid #000;
+  padding-left: 10px;
+  border-left: 4px solid var(--purple500);
   /* Estilo para o item ativo */
+}
+div.active span.menuLabel{
+  color: var(--purple400);
+  font-size: 20px;
 }
 
 .menuLabel {
@@ -48,11 +69,15 @@ aside {
 }
 
 aside.open .menuLabel {
-  display: inline;
+  display: flex;
   align-items: center;
-
+  justify-content: flex-start;
+  width: 120px;
+  color: var(--gray200);
   .menuItens {
+    display: flex;
     align-items: flex-start;
+
   }
 
   /* Exibe o label quando o menu está aberto */
