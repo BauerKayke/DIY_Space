@@ -36,7 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       // Fechar a conexão
       mysqli_close($conn);
       // Redirecionar para a página de confirmação de e-mail
-      header("Location: confirmacaoEmail.php");
+      header("Location: ../Pages/Config.php");
       exit();
     } else {
       echo "Erro: Não foi possível criar o usuário.";
