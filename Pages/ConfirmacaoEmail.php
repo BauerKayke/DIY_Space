@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -15,7 +18,7 @@
     <div class="modal-container">
       <div class="modal-heading">
         <h3 class="title-h3">Confirmação de cadastro</h3>
-        <p>Link de confirmação enviado para email@email.com.</p>
+        <p>Link de confirmação enviado para <?= $_SESSION['email'] ?>.</p>
       </div>
       <a class="primary-button" href="./Perfil.php">Cofirmar</a>
     </div>

@@ -1,4 +1,5 @@
 <?php
+session_start();
 include './connection.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -31,10 +32,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     mysqli_stmt_execute($stmt);
 
     if (mysqli_stmt_affected_rows($stmt) > 0) {
+
+      $_SESSION['email'] = $email;
+
       // Fechar a declaração
       mysqli_stmt_close($stmt);
       // Fechar a conexão
       mysqli_close($conn);
+
       // Redirecionar para a página de confirmação de e-mail
       header("Location: ../Pages/ConfirmacaoEmail.php");
       exit();
