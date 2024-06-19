@@ -3,7 +3,6 @@ session_start();
 include './connection.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-  // Capturar valores do formulário
   $nome = $_POST['nome'] ?? '';
   $email = $_POST['email'] ?? '';
   $pais = $_POST['pais'] ?? '';
@@ -15,15 +14,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $confirm_password = $_POST['confirm_password'] ?? '';
   $restricaoAcesso = 0;
 
-  // Verificar se a senha e a confirmação de senha coincidem
   if ($senha !== $confirm_password) {
     die("As senhas não coincidem.");
   }
 
-  // Obter a conexão com o banco de dados
   $conn = getDbConnection();
 
-  // Inserir os dados na tabela users
   $sql = "INSERT INTO users (nome, email, senha, pais, estado, cidade, endereco, numeroResidencia, restricaoAcesso) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
   $stmt = mysqli_prepare($conn, $sql);
 
@@ -33,14 +29,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if (mysqli_stmt_affected_rows($stmt) > 0) {
 
+      $_SESSION['user_id'] = $user_id;
       $_SESSION['email'] = $email;
 
-      // Fechar a declaração
       mysqli_stmt_close($stmt);
-      // Fechar a conexão
       mysqli_close($conn);
 
-      // Redirecionar para a página de confirmação de e-mail
       header("Location: ../Pages/ConfirmacaoEmail.php");
       exit();
     } else {
@@ -54,4 +48,3 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
   mysqli_close($conn);
 }
-?>

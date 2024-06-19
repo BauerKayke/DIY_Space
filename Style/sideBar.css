@@ -16,6 +16,13 @@ aside.open {
   /* Aumenta a largura quando a classe 'open' é adicionada */
 }
 
+aside {
+
+  background-color: var(--gray700);
+  height: 100%;
+  position: fixed;
+}
+
 .menuItens {
   display: flex;
   align-items: center;
