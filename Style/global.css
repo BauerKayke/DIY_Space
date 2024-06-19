@@ -27,6 +27,9 @@ body {
 }
 
 .primary-button {
+  font-family: "Poppins";
+  border: 0;
+
   padding: 0.5rem 2rem;
   background: var(--purple500);
   border-radius: 5px;
@@ -35,4 +38,55 @@ body {
   font-weight: 500;
 
   text-decoration: none;
+}
+
+.secondary-button {
+  padding: 0.5rem 1.5rem;
+  color: var(--purple500);
+  border: 1px solid var(--purple500);
+  background: none;
+  border-radius: 5px;
+  font-size: 1.25rem;
+  font-weight: 500;
+
+  text-decoration: none;
+}
+
+.box-container {
+  border-radius: 5px;
+  padding: 3rem;
+
+  background-color: var(--gray800);
+}
+
+.main {
+  display: grid;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+
+  padding: 4rem;
+}
+
+.input-dark {
+  height: 50px;
+  padding: 13px 16px;
+  border: 0;
+  border-radius: 5px;
+  margin-top: 3px;
+  box-shadow: none;
+  color: var(--gray200);
+  background-color: var(--gray900);
+}
+
+label {
+  color: var(--gray200);
+}
+
+.title-h1 {
+  font-size: 2rem;
+}
+.title-h2 {
+  font-size: 1.5rem;
+  
 }

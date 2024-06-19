@@ -12,23 +12,9 @@
 }
 
 .profile-container {
-  display: grid;
-  margin-left: 120px;
-  flex-direction: column;
-  gap: 1.5rem;
-
-  justify-content: center;
-  align-items: center;
-  padding: 4rem;
-
-
   & .profile-info-container {
     display: flex;
     gap: 4rem;
-    border-radius: 5px;
-    padding: 3rem;
-  
-    background-color: var(--gray800);
   
     & .profile-image-container {
       clip-path: circle();
