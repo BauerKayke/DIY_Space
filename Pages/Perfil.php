@@ -1,3 +1,18 @@
+<?php 
+
+session_start();
+$user_id = $_SESSION['user_id'];
+echo $user_id;
+
+include '../Database/connection.php';
+
+$conn = getDbConnection();
+
+$sql = "SELECT nome, descricao FROM users WHERE id = $user_id";
+$Recordset1 = mysqli_query($conn, $sql) or die(mysqli_error($conn));
+$row = mysqli_fetch_assoc($Recordset1);
+
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -46,7 +61,7 @@
       <img class="profile-image-container" alt="" src="../assets/exDiy.jpeg">
       <div class="profile-info-content">
         <header class="profile-header">
-          <h2 class="title-h2">Nome de usuário</h2>
+          <h2 class="title-h2"><?=$row["nome"]?></h2>
 
           <div class="profile-actions-buttons">
             <a class="primary-button" href="EditarPerfil.php">Editar perfil</a>
@@ -58,11 +73,12 @@
           </div>
         </header>
 
-        <p class="profile-bio">
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        <!-- <p class="profile-bio">
+          <?=$row["descricao"] ?>
+          text of the printing and typesetting industry.
           Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
           It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-        </p>
+        </p> -->
 
         <div>
           <span class="label" >Data de acesso</span>
