@@ -20,14 +20,16 @@
   padding: 0;
 }
 
-body {
-  /* overflow: hidden; */
+body.login {
+  overflow: auto;
+  height: 100vh;
+  overflow-x: hidden;
 }
 
 main {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  height: 100vh;
+  height: 100%;
 }
 
 
@@ -39,6 +41,8 @@ main {
   justify-content: center;
   gap: 48px;
   background: var(--gray800);
+  padding: 24px 48px;
+
 
   div {
     width: 75%;

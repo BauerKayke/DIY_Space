@@ -89,6 +89,6 @@
     window.location.href = '../Pages/CriarConta.php'
   }
   function login(){
-    window.location.href = '../Pages/Login.php'
+    window.location.href = '../Pages/Config.php'
   }
 </script>
