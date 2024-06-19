@@ -13,6 +13,7 @@ CREATE TABLE IF NOT EXISTS users (
     nome VARCHAR(255) NOT NULL,
     email VARCHAR(255) NOT NULL,
     senha VARCHAR(255) NOT NULL,
+    descricao VAR(255)
     pais VARCHAR(255),
     estado VARCHAR(255),
     cidade VARCHAR(255),

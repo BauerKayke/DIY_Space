@@ -25,11 +25,15 @@
     }
     
     & .profile-info-content {
-      display: grid;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
       gap: 1rem;
   
       & .profile-header {
         display: flex;
+        height: max-content;
+        align-items: center;
         justify-content: space-between;
     
         & .profile-actions-buttons {

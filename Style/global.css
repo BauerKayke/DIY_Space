@@ -85,8 +85,23 @@ label {
 
 .title-h1 {
   font-size: 2rem;
+  margin: 0;
+  inset: unset;
 }
 .title-h2 {
   font-size: 1.5rem;
+  inset: unset;
+  margin: 0;
+  line-height: normal;
   
+}
+
+.back-link {
+  display: flex;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: var(--purple400);
 }

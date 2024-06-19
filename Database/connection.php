@@ -1,7 +1,7 @@
 <?php
 $hostname = "localhost";
-$username = "diySpace";
-$password = "12345";
+$username = "root";
+$password = "";
 $dbname = "diySpace";
 
 function getDbConnection()
