@@ -1,0 +1,71 @@
+aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+  transition: width 0.3s ease;
+  width: 60px;
+  /* Inicialmente estreito */
+  overflow: hidden;
+  /* Oculta os labels */
+}
+
+aside.open {
+  width: 200px;
+  /* Aumenta a largura quando a classe 'open' é adicionada */
+}
+
+.menuItens {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.menuItens div {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.menuItens div.active img {
+  border: 2px solid #000;
+  /* Estilo para o item ativo */
+}
+
+.menuLabel {
+  margin-left: 10px;
+  display: none;
+  /* Inicialmente oculto */
+}
+
+aside.open .menuLabel {
+  display: inline;
+  align-items: center;
+
+  .menuItens {
+    align-items: flex-start;
+  }
+
+  /* Exibe o label quando o menu está aberto */
+}
+
+/* Media queries para ajustar o gap conforme a altura */
+@media (min-height: 650px) {
+  .menuItens {
+    gap: 10px;
+  }
+}
+
+@media (min-height: 800px) and (max-height: 900px) {
+  .menuItens {
+    gap: 30px;
+  }
+}
+
+@media (min-height: 1000px) {
+  .menuItens {
+    gap: 40px;
+  }
+}

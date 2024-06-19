@@ -11,7 +11,7 @@
 
 </head>
 
-<body>
+<body class="login">
   <main>
     <div class="imgLogo">
       <img src="../assets/Frame 47.png" alt="">
