@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="../Style/sideBar.css">
+
 <aside>
   <div class="menuToggle">
     <img src="../assets/material-symbols_menu.png" alt="Menu Toggle">
