@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
   if ($senha !== $senhaAtual) {
-    die("As senhas não coincidem.");
+    die("Senha atual incorreta.");
   }
 
   if ($novaSenha !== $confirmarSenha) {

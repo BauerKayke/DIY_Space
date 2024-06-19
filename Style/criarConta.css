@@ -76,7 +76,7 @@ main {
   align-items: flex-start;
   justify-content: center;
   flex-direction: column;
-  padding: 64px 128px;
+  padding: 64px 64px;
   background: var(--gray900);
   font-family: 'Poppins';
 
