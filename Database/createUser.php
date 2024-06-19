@@ -29,6 +29,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if (mysqli_stmt_affected_rows($stmt) > 0) {
 
+      $user_id = mysqli_insert_id($conn);
+      
       $_SESSION['user_id'] = $user_id;
       $_SESSION['email'] = $email;
 

@@ -5,8 +5,8 @@
         <p>DIY <span>SPACE </span></p>
       </div>
       <ul>
-        <li><button class="btn-Create" onclick='criarConta()'>Criar</button></li>
-        <li><button class="btn-Enter" onclick="login()">Entrar</button></li>
+        <li><button class="btn btn-Create" onclick='criarConta()'>Criar</button></li>
+        <li><button class="btn btn-Enter" onclick="login()">Entrar</button></li>
       </ul>
     </nav>
   </header>

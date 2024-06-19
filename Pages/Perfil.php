@@ -1,18 +1,33 @@
-<?php 
-
+<?php
 session_start();
-$user_id = $_SESSION['user_id'];
-echo $user_id;
+if (isset($_SESSION["user_id"])) {
+    $user_id = $_SESSION["user_id"];
+    echo $user_id;
 
-include '../Database/connection.php';
+    include '../Database/connection.php';
 
-$conn = getDbConnection();
+    $conn = getDbConnection();
 
-$sql = "SELECT nome, fotoPerfil FROM users WHERE id = $user_id";
-$Recordset1 = mysqli_query($conn, $sql) or die(mysqli_error($conn));
-$row = mysqli_fetch_assoc($Recordset1);
+    $stmt = $conn->prepare("SELECT nome, fotoPerfil FROM users WHERE id = ?");
+    $stmt->bind_param("i", $user_id);
 
+    $stmt->execute();
+
+    $result = $stmt->get_result();
+
+    if ($result->num_rows > 0) {
+        $row = $result->fetch_assoc();
+    } else {
+        echo "No user found with the given ID.";
+    }
+
+    $stmt->close();
+    $conn->close();
+} else {
+    echo "User ID is not set in session.";
+}
 ?>
+
 <!DOCTYPE html>
 
 <html lang="pt-BR">
